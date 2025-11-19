@@ -1,0 +1,34 @@
+# Dependencias
+node_modules/
+
+# Archivos de entorno
+.env
+.env.local
+.env.*.local
+
+# Archivos de logs
+logs/
+*.log
+npm-debug.log*
+
+# Directorio de archivos subidos
+uploads/*
+!uploads/.gitkeep
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Archivos de cobertura de pruebas
+coverage/
+
+# Archivos temporales
+tmp/
+temp/
