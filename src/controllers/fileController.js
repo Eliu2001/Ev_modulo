@@ -32,11 +32,13 @@ async function uploadFile(req, res, next) {
 function serveFile(req, res, next) {
     try {
         const { filename } = req.params;
-        const filePath = path.join(UPLOAD_DIR, filename);
-        if (!fs.existsSync(filePath)) return res.status(404).json({
-            success:
-                false, message: 'File not found'
-        });
+        const filePath = path.resolve(UPLOAD_DIR, filename);
+        if (!fs.existsSync(filePath)) {
+            return res.status(404).json({
+                success: false, 
+                message: 'File not found'
+            });
+        }
         res.sendFile(filePath);
     } catch (err) { next(err); }
 }
