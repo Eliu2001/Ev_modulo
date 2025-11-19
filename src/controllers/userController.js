@@ -34,7 +34,7 @@ async function me(req, res, next) {
 try {
 const userId = req.userId;
 const user = findById(userId);
-if (!user) return res.status(404).json({ success: false, message: 'User not found' });
+if (!user) return res.status(404).json({ success: false, message: 'Usernot found' });
 res.json({ success: true, data: { id: user.id, name: user.name, email:
 user.email } });
 
